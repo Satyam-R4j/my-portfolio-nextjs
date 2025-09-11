@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 
 const jetbrainsMono = JetBrains_Mono({
     subsets: ["latin"],
@@ -15,9 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${jetbrainsMono.variable} bg-black`}>
-            <body className={`${jetbrainsMono.className} antialiased bg-black text-white min-h-screen`}>
-              <Header/>
-                {children}
+            <body
+                className={`${jetbrainsMono.className} antialiased bg-black text-white min-h-screen`}
+            >
+                <Header />
+                <PageTransition>{children}</PageTransition>
             </body>
         </html>
     );
