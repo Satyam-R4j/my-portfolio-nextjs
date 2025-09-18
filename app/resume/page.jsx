@@ -301,13 +301,7 @@ const Resume = () => {
                                                     delayDuration={100}
                                                 >
                                                     <Tooltip>
-                                                        <TooltipTrigger
-                                                            className="  mx-auto mb-5  w-[90px] h-[90px]
-    sm:w-[120px] sm:h-[120px]
-    md:w-[160px] md:h-[160px]
-    lg:w-[120px] lg:h-[120px]
-    xl:w-[150px] xl:h-[150px] bg-[#0f213b] rounded-xl flex justify-center items-center group"
-                                                        >
+                                                        <TooltipTrigger className="  mx-auto mb-5  w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] lg:w-[120px] lg:h-[120px] xl:w-[150px] xl:h-[150px] bg-[#0f213b] rounded-xl flex justify-center items-center group">
                                                             <div className="text-6xl hover:text-red-500 transition-colors duration-300">
                                                                 {skill.icon}
                                                             </div>
@@ -328,34 +322,29 @@ const Resume = () => {
                                 </ul>
                             </div>
                         </TabsContent>
-                        <TabsContent value="about" className="w-full">
-                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">
-                                    {experience.title}
-                                </h3>
-                                <p className="max-w-[600px] text-2xl text-white/60 mx-auto xl:mx-0">
-                                    {experience.description}
-                                </p>
-                                <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                                        {experience.items.map((item, index) => {
+                        <TabsContent
+                            value="about"
+                            className="w-full text-center xl:text-left"
+                        >
+                            <div className="flex flex-col gap-[30px]">
+                                
+                                    <h3 className="text-4xl font-bold">{about.title}</h3>
+                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                                        {about.info.map((item, index) => {
                                             return (
-                                                <li
-                                                    key={index}
-                                                    className="bg-[#0f213b] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                                                >
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px]  text-red-500 lg-text-left">
-                                                        {item.duration}
-                                                    </h3>
-                                                    <div className="flex items-center gap-3 text-white/80">
-                                                        <span className="w-[6px] h-[6px] rounded-full bg-red-500"></span>
-                                                        {item.Title}
-                                                    </div>
+                                                <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                                                    <span className="text-white/60">
+                                                        {item.fieldName}
+                                                    </span>
+                                                    <span className="text-red-500">-</span>
+                                                    <span className="text-xl">
+                                                        {item.fieldValue}
+                                                    </span>
                                                 </li>
                                             );
                                         })}
                                     </ul>
-                                </ScrollArea>
                             </div>
                         </TabsContent>
                     </div>
