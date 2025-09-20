@@ -29,7 +29,7 @@ const MobileNav = () => {
             </SheetTrigger>
 
             {/* Drawer */}
-            <SheetContent className="flex flex-col bg-black text-white px-6 py-8">
+            <SheetContent className="flex flex-col w-60 bg-[#021735]  text-white px-6 py-8">
                 {/* Logo */}
                 <div className="mb-8 text-2xl font-bold">
                     <Link
@@ -41,7 +41,7 @@ const MobileNav = () => {
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex flex-col gap-6">
+                <nav className="flex flex-col gap-6 items-center justify-baseline">
                     {links.map((link, i) => (
                         <SheetClose asChild key={i}>
                             <Link

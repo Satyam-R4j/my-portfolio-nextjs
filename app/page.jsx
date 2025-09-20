@@ -27,8 +27,10 @@ export default function Home() {
                                 size="lg"
                                 className="uppercase flex items-center gap-2 rounded-3xl"
                             >
+                                  <a href="/SatyamRaj_CV.pdf" download className="flex items-center gap-2">
                                 <span>Download .CV</span>
                                 <FiDownload className="text-xl" />
+                                </a>
                             </Button>
                             <div className="mb-8 xl:mb-0">
                                 <Social
@@ -45,7 +47,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Stats/>    
+            <Stats />    
         </section>
     );
 }
